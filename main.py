@@ -1,5 +1,5 @@
 from scripts.constants import GREETING, CHOICES
-from scripts.sett import settings, clear_console
+from scripts.program import settings, clear_console
 
 
 def main():
