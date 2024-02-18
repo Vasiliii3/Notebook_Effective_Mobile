@@ -54,4 +54,4 @@ def print_table(values) -> None:
 
 
 def add_value_to_table():
-    pass
+    print(ADDVALUE)
