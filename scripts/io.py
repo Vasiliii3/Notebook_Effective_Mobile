@@ -1,6 +1,8 @@
 import csv
 import os
 from pathlib import Path
+from typing import List
+
 from scripts.config import FILE, DELIMITER, ENCODING
 
 file = os.path.join(Path(__file__).parent.parent, FILE)
@@ -27,3 +29,11 @@ def addvalue():
                               "Телефон рабочий": "",
                               "Телефон личный (сотовый)": "2546",
                               })
+
+
+def read_table() -> list[str]:
+    """Чтение данных из файла в список"""
+    with open(FILE, encoding='utf-8-sig') as r_file:
+        file_reader = csv.DictReader(r_file, delimiter=DELIMITER)
+        records = [row for row in file_reader]
+    return records

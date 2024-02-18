@@ -1,7 +1,7 @@
 import os
 
-from scripts.constants import SETTING, GOODNEWTABLE
-from scripts.io import newtable
+from scripts.constants import SETTING, GOODNEWTABLE, EMPTYBOOK
+from scripts.io import newtable, read_table
 
 
 def clear_console():
@@ -24,3 +24,11 @@ def settings():
             print('Неправильное значение')
             input("Нажмите Enter, чтобы продолжить...")
             clear_console()
+
+
+def print_table(values):
+    if not values:
+        print(EMPTYBOOK)
+        return
+    for row in values:
+        print(row)
