@@ -1,0 +1,16 @@
+
+
+# Environments
+.env
+ENV/
+env.bak/
+venv.bak/
+.vim
+.idea
+.venv/
+
+# Other
+/for_test.py
+
+__pycache__
+*.pyc
