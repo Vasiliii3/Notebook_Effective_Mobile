@@ -18,16 +18,16 @@ def newtable():
         print('')
 
 
-def addvalue():
+def add_value_table(family: str, name: str, patronymic: str, name_organizations: str, phone_work: str, phone_mobile: str) -> None:
     with open(FILE, mode="a", encoding=ENCODING) as w_file:
         names = NAMECOLUMN
         file_writer = csv.DictWriter(w_file, delimiter=DELIMITER, fieldnames=names, lineterminator="\r")
-        file_writer.writerow({"Фамилия": "Петров2",
-                              "Имя": "Ива",
-                              "Отчество": "Кип",
-                              "Название организации": "95",
-                              "Телефон рабочий": "",
-                              "Телефон личный (сотовый)": "2546",
+        file_writer.writerow({"Фамилия": family,
+                              "Имя": name,
+                              "Отчество": patronymic,
+                              "Название организации": name_organizations,
+                              "Телефон рабочий": phone_work,
+                              "Телефон личный (сотовый)": phone_mobile,
                               })
 
 

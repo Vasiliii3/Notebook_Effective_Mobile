@@ -1,7 +1,7 @@
 import os
 
 from scripts.constants import SETTING, GOODNEWTABLE, EMPTYBOOK, ALLVALUE, ADDVALUE
-from scripts.io import newtable, read_table, NAMECOLUMN
+from scripts.io import newtable, read_table, NAMECOLUMN, add_value_table
 from scripts.config import COUNTLIENS
 
 
@@ -29,6 +29,7 @@ def settings() -> None:
 
 def print_table_for_file() -> list[str] | None:
     """Получение кортежа словаря из файла записной книжки"""
+    clear_console()
     print(ALLVALUE)
     values = read_table()
     if not values:
@@ -55,3 +56,13 @@ def print_table(values) -> None:
 
 def add_value_to_table():
     print(ADDVALUE)
+    clear_console()
+    family = input("Введите фамилию ")
+    name = input("Введите имя ")
+    patronymic = input("Введите отчество ")
+    name_organizations = input("Введите название организации ")
+    phone_work = input("Введите телефон рабочий ")
+    phone_mobile = input("Введите телефон личный(сотовый) ")
+    add_value_table(family, name, patronymic, name_organizations, phone_work, phone_mobile)
+
+

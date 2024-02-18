@@ -1,5 +1,5 @@
 from scripts.constants import GREETING, CHOICES
-from scripts.program import settings, clear_console, print_table_for_file
+from scripts.program import settings, clear_console, print_table_for_file, add_value_to_table
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
             case 2:
                 print_table_for_file()
             case 3:
-                pass
+                add_value_to_table()
             case 4:
                 pass
             case 5:
