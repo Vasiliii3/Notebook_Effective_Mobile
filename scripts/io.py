@@ -19,6 +19,7 @@ def newtable():
 
 
 def add_value_table(family: str, name: str, patronymic: str, name_organizations: str, phone_work: str, phone_mobile: str) -> None:
+    """Записать значение в таблицу"""
     with open(FILE, mode="a", encoding=ENCODING) as w_file:
         names = NAMECOLUMN
         file_writer = csv.DictWriter(w_file, delimiter=DELIMITER, fieldnames=names, lineterminator="\r")
