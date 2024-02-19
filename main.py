@@ -1,10 +1,12 @@
 from scripts.constants import GREETING, CHOICES
-from scripts.program import settings, clear_console, print_table_for_file, add_value_to_table
+from scripts.program import settings, print_table_for_file, add_value_to_table
+from scripts.utils import clear_console
 
 
 def main():
     print(GREETING)
     while True:
+        clear_console()
         print(CHOICES)
         value = int(input())
         match value:
@@ -22,7 +24,7 @@ def main():
                 return
             case _:
                 print('Неправильное значение')
-                input("Нажмите Enter, чтобы продолжить...")
+                input('Нажмите Enter, чтобы продолжить...')
                 clear_console()
 
 
