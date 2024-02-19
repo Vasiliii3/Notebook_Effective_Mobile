@@ -22,3 +22,18 @@ def print_table(values) -> None:
                 break
             current = 0
         print(*val.values(), sep='\t')
+    input('Нажмите Enter, чтобы выйти в меню')
+
+
+def input_date():
+    family = input("Введите фамилию ")
+    name = input("Введите имя ")
+    patronymic = input("Введите отчество ")
+    name_organizations = input("Введите название организации ")
+    phone_work = input("Введите телефон рабочий ")
+    phone_mobile = input("Введите телефон личный(сотовый) ")
+    return family, name, patronymic, name_organizations, phone_work, phone_mobile
+
+
+def search_table(values):
+    pass
