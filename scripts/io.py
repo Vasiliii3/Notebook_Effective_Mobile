@@ -7,12 +7,12 @@ from scripts.constants import GOOD_RECODING
 
 file = os.path.join(Path(__file__).parent.parent, FILE)
 
-NAMECOLUMN = ["Фамилия", "Имя", "Отчество", "Название организации", "Телефон рабочий", "Телефон личный (сотовый)"]
+NAME_COLUMN = ["Фамилия", "Имя", "Отчество", "Название организации", "Телефон рабочий", "Телефон личный (сотовый)"]
 
 
-def newtable():
+def new_table():
     with open(file, mode="w", encoding=ENCODING) as w_file:
-        names = NAMECOLUMN
+        names = NAME_COLUMN
         file_writer = csv.DictWriter(w_file, delimiter=DELIMITER, fieldnames=names, lineterminator="\r")
         file_writer.writeheader()
         print('')
@@ -22,7 +22,7 @@ def add_value_table(family: str, name: str, patronymic: str, name_organizations:
                     phone_mobile: str) -> None:
     """Записать значение в таблицу"""
     with open(FILE, mode="a", encoding=ENCODING) as w_file:
-        names = NAMECOLUMN
+        names = NAME_COLUMN
         file_writer = csv.DictWriter(w_file, delimiter=DELIMITER, fieldnames=names, lineterminator="\r")
         file_writer.writerow({"Фамилия": family,
                               "Имя": name,

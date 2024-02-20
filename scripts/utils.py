@@ -3,7 +3,7 @@ import re
 from typing import List, Tuple
 
 from scripts.config import COUNTLIENS
-from scripts.io import NAMECOLUMN
+from scripts.io import NAME_COLUMN
 
 
 def clear_console():
@@ -14,7 +14,7 @@ def clear_console():
 def print_table(values) -> None:
     """Вывод в консоли кортеж словарей и сортировка по Фамилии"""
     sort_values = sorted(values, key=lambda x: x['Фамилия'])
-    print(*NAMECOLUMN, sep='\t')
+    print(*NAME_COLUMN, sep='\t')
     count = COUNTLIENS
     current = 0
     for val in sort_values:
@@ -68,6 +68,6 @@ def search_dictionary(data_table: list[dict]) -> list[tuple[int, dict]]:
 
 def print_after_search(data):
     '''Вывод в консоль результата поиска'''
-    print('№', *NAMECOLUMN, sep='\t')
+    print('№', *NAME_COLUMN, sep='\t')
     for count, val in enumerate(data, 1):
         print(count, *val[1].values(), sep='\t')
