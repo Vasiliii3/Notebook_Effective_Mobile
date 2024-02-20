@@ -5,7 +5,7 @@ import configparser
 file = os.path.join(Path(__file__).parent.parent, 'settings.ini')
 
 config = configparser.ConfigParser()
-config.read(file)
+config.read(file, encoding="utf-8")
 COUNTLIENS = int(config['DEFAULT']['CountLines'])
 NAME = config['DEFAULT']['Name']
 
