@@ -18,7 +18,8 @@ def newtable():
         print('')
 
 
-def add_value_table(family: str, name: str, patronymic: str, name_organizations: str, phone_work: str, phone_mobile: str) -> None:
+def add_value_table(family: str, name: str, patronymic: str, name_organizations: str, phone_work: str,
+                    phone_mobile: str) -> None:
     """Записать значение в таблицу"""
     with open(FILE, mode="a", encoding=ENCODING) as w_file:
         names = NAMECOLUMN
@@ -33,7 +34,8 @@ def add_value_table(family: str, name: str, patronymic: str, name_organizations:
     print(GOOD_RECODING)
     input('Нажмите Enter, чтобы выйти в меню')
 
-def read_table() -> list[str]:
+
+def read_table() -> list[dict]:
     """Чтение данных из файла в список"""
     with open(FILE, encoding='utf-8-sig') as r_file:
         file_reader = csv.DictReader(r_file, delimiter=DELIMITER)

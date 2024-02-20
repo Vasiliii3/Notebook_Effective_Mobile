@@ -1,6 +1,6 @@
 from scripts.constants import SETTING, GOOD_NEW_TABLE, EMPTY_BOOK, ALL_VALUE, ADD_VALUE
 from scripts.io import newtable, read_table, add_value_table
-from scripts.utils import clear_console, print_table, input_date
+from scripts.utils import clear_console, print_table, input_date, search_dictionary, print_after_search
 
 
 def settings() -> None:
@@ -38,3 +38,10 @@ def add_value_to_table() -> None:
     print('Введите данные для добавления: ')
     data = input_date()
     add_value_table(*data)
+
+
+def search_in_table():
+    """По ключам ищет в таблице. Результат выводит в консоль"""
+    data = read_table()
+    result = search_dictionary(data)
+    print_after_search(result)
