@@ -37,7 +37,7 @@
 * `python -m venv venv`
 * Для активации используем
 * * Для Для Windows: `venv\Scripts\activate`
-* * Для macOS и Linux: `source venv/bin/activate'
+* * Для macOS и Linux: `source venv/bin/activate`
 * Потом запускаем сам скрипт 
 
 ## Особенности
