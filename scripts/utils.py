@@ -1,13 +1,14 @@
 import os
 import re
-from typing import List, Tuple
 
 from scripts.config import COUNTLIENS
 from scripts.io import NAME_COLUMN
 
 
 def clear_console():
-    """Очищает консоль в зависимости от операционной системы."""
+    """Очищает консоль в зависимости от операционной системы.
+    :rtype: object
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -37,6 +38,7 @@ def input_date():
     phone_work = input("Введите телефон рабочий ")
     phone_mobile = input("Введите телефон личный(сотовый) ")
     return family, name, patronymic, name_organizations, phone_work, phone_mobile
+# TODO: вернуть словарь
 
 
 def search_dictionary(data_table: list[dict]) -> list[tuple[int, dict]]:
@@ -64,10 +66,10 @@ def search_dictionary(data_table: list[dict]) -> list[tuple[int, dict]]:
             result.append((count, item))
 
     return result
-
+# TODO: переделать через выбор
 
 def print_after_search(data):
-    '''Вывод в консоль результата поиска'''
+    """Вывод в консоль результата поиска"""
     print('№', *NAME_COLUMN, sep='\t')
     for count, val in enumerate(data, 1):
         print(count, *val[1].values(), sep='\t')

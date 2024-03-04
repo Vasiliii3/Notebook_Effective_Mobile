@@ -33,7 +33,7 @@ def add_value_table(family: str, name: str, patronymic: str, name_organizations:
                               })
     print(GOOD_RECODING)
     input('Нажмите Enter, чтобы выйти в меню')
-
+# TODO: переделать на словарь
 
 def read_table() -> list[dict]:
     """Чтение данных из файла в список"""

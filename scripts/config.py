@@ -1,6 +1,6 @@
+import configparser
 import os
 from pathlib import Path
-import configparser
 
 file = os.path.join(Path(__file__).parent.parent, 'settings.ini')
 
@@ -12,5 +12,3 @@ NAME = config['DEFAULT']['Name']
 FILE = "notebook.txt"
 ENCODING = "utf-8-sig"
 DELIMITER = ";"
-
-
