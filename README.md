@@ -28,7 +28,7 @@
 
 ## Установка
 
-* `git clone https://github.com/Vasiliii3/Notebook_Effective_Mobile.git`
+* `git clone https://github.com/Vasiliii3/notebook_Effective_mobile.git`
 * Для запуска скрипта
 *  `python main.py`
 
